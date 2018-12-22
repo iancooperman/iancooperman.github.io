@@ -1,8 +1,7 @@
-body {
-	background-color: blue;
-	color: white;
+#heading {
+	background-color: rgb(2, 2, 168);
 }
 
-#heading {
-	background-color: darkblue;
+#overview {
+	color: black;
 }
