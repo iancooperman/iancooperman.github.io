@@ -2,6 +2,15 @@
 	background-color: rgb(2, 2, 168);
 }
 
-#overview {
+#aboutme {
 	color: black;
+}
+
+#identifier {
+	margin-top: 10%
+}
+
+#pictureofme {
+	width: 300px;
+	height: auto;
 }
