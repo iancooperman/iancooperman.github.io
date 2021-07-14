@@ -8,6 +8,9 @@ import Col from 'react-bootstrap/Col';
 
 import AboutMe from './AboutMe.js';
 
+// text imports
+import { introHeader, introBody } from './text.js';
+
 function Home() {
     return (
         <div>
@@ -15,9 +18,8 @@ function Home() {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>Hi. I'm Ian Cooperman.</h1>
-                            <p>I'm a recently graduated Computer Science student.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor condimentum lacinia quis vel eros donec. Ornare arcu odio ut sem nulla.</p>
+                            <h1>{introHeader}</h1>
+                            <p>{introBody}</p>
                         </Col>
                         <Col>
                             <img src={profilePic} alt="Profile Pic" id="profilePic"></img>
