@@ -6,9 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Home from './Home'
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="#home">Ian Cooperman</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,8 +26,16 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
 
-      <Home />
-    </div>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path={projectInfo.name}>
+          <Project projectInfo={projectInfo} />
+        </Route>
+      </Switch>
+
+    </Router>
   );
 }
 
