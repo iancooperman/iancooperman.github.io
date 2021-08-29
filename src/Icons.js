@@ -4,7 +4,7 @@ import { faGithub, faLinkedin, faKaggle } from '@fortawesome/free-brands-svg-ico
 export function GithubIcon(props) {
     return (
         <div class="GitHubIcon">
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} fixedWidth />
         </div>
     );
 }
@@ -13,7 +13,7 @@ export function GithubIcon(props) {
 export function LinkedInIcon(props) {
     return (
         <div class="LinkedInIcon">
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faLinkedin} fixedWidth />
         </div>
     );
 }
@@ -21,7 +21,7 @@ export function LinkedInIcon(props) {
 export function KaggleIcon(props) {
     return (
         <div class="KaggleIcon">
-            <FontAwesomeIcon icon={faKaggle} />
+            <FontAwesomeIcon icon={faKaggle} fixedWidth />
         </div>
     )
 }
