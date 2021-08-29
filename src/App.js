@@ -26,13 +26,17 @@ function App() {
             </NavDropdown>
           </Nav>
           <Button variant="link">
-            <GithubIcon />
+            <a href="https://github.com/iancooperman"><GithubIcon />
+            </a>
           </Button>
           <Button variant="link">
-            <LinkedInIcon />
+            <a href="https://www.linkedin.com/in/ian-pl-cooperman/">
+              <LinkedInIcon />
+            </a>
           </Button>
           <Button variant="link">
-            <KaggleIcon />
+            <a href="https://www.kaggle.com/iancooperman42"><KaggleIcon /></a>
+            
           </Button>
         </Navbar.Collapse>
       </Navbar>
