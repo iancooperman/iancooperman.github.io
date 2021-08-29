@@ -4,7 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 import Home from './Home'
+import { GithubIcon, LinkedInIcon, KaggleIcon } from './Icons';
+
+
 
 function App() {
   return (
@@ -21,6 +25,19 @@ function App() {
               <NavDropdown.Item href="#action/3.3">JavaScript Game Engine</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <Button variant="link" className="profile-button">
+            <a href="https://github.com/iancooperman" ><GithubIcon />
+            </a>
+          </Button>
+          <Button variant="link" className="profile-button">
+            <a href="https://www.linkedin.com/in/ian-pl-cooperman/" >
+              <LinkedInIcon />
+            </a>
+          </Button>
+          <Button variant="link" className="profile-button">
+            <a href="https://www.kaggle.com/iancooperman42"><KaggleIcon /></a>
+
+          </Button>
         </Navbar.Collapse>
       </Navbar>
 
