@@ -10,19 +10,27 @@ import { GithubIcon, LinkedInIcon, KaggleIcon } from './Icons';
 
 
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+
+import { projectList } from "./Projects"
+
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">Ian Cooperman</Navbar.Brand>
+        <Navbar.Brand href="/">Ian Cooperman</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
             <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Dyetr</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Search Engine</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">JavaScript Game Engine</NavDropdown.Item>
+              {
+                projectList.map((projectInfo, index) => {
+                  return (
+                    <NavDropdown.Item href={projectNameToURL(projectInfo.name)} >{projectInfo.name}</NavDropdown.Item>
+                  )
+                })
+              }
             </NavDropdown>
           </Nav>
           <ProfileButton
@@ -40,9 +48,31 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
 
-      <Home />
-    </div>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+
+      {/* Give all the projects a proper route name */}
+      {
+        projectList.map((projectInfo, index) => {
+          return (
+            <Route key={index} path={projectNameToURL(projectInfo.name)}>
+              Hey
+              {projectInfo.projectPage}
+            </Route>
+          )
+        })
+      }
+
+    </Router>
   );
+}
+
+function projectNameToURL(name) {
+  let lower = name.toLowerCase();
+  let final = "/projects/" + lower.replace(/ /g, "-");
+
+  return final;
 }
 
 export default App;
