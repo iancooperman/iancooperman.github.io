@@ -25,12 +25,18 @@ function App() {
               <NavDropdown.Item href="#action/3.3">JavaScript Game Engine</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <ProfileButton url="https://github.com/iancooperman" icon={<GithubIcon />} />
-
-          <ProfileButton url="https://www.linkedin.com/in/ian-pl-cooperman/" icon={<LinkedInIcon />} />
-
-          <ProfileButton url="https://www.kaggle.com/iancooperman42" icon={<KaggleIcon />} />
-
+          <ProfileButton
+            url="https://github.com/iancooperman"
+            icon={<GithubIcon />}
+          />
+          <ProfileButton
+            url="https://www.linkedin.com/in/ian-pl-cooperman/"
+            icon={<LinkedInIcon />}
+          />
+          <ProfileButton
+            url="https://www.kaggle.com/iancooperman42"
+            icon={<KaggleIcon />}
+          />
         </Navbar.Collapse>
       </Navbar>
 
