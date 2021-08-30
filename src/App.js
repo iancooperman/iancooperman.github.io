@@ -9,7 +9,7 @@ import Home from './Home'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
-import { projectList } from "./Projects"
+import { projectList, ProjectIntro } from "./Projects"
 
 function App() {
   return (
@@ -29,7 +29,9 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
 
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact>
+        <Home />
+      </Route>
 
       {/* Give all the projects a proper route name */}
       {
@@ -39,7 +41,9 @@ function App() {
 
           return (
             <Route key={index} path={"/" + final}>
-              THIS WORKS?</Route>
+              Hey
+              {projectInfo.projectPage}
+            </Route>
           )
         })
       }
