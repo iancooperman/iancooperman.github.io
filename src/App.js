@@ -8,6 +8,9 @@ import Home from './Home'
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+
+import { projectList } from "./Projects"
+
 function App() {
   return (
     <Router>
@@ -26,14 +29,20 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
 
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path={projectInfo.name}>
-          <Project projectInfo={projectInfo} />
-        </Route>
-      </Switch>
+      <Route path="/" exact component={Home} />
+
+      {/* Give all the projects a proper route name */}
+      {
+        projectList.map((projectInfo, index) => {
+          let lower = projectInfo.name.toLowerCase();
+          let final = lower.replace(/ /g, "-");
+
+          return (
+            <Route key={index} path={"/" + final}>
+              THIS WORKS?</Route>
+          )
+        })
+      }
 
     </Router>
   );
