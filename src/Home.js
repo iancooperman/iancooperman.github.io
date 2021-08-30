@@ -1,14 +1,15 @@
-import profilePic from './profilepic.jpg'
-import './Home.css';
-
+// Bootstrap imports
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+// Local imports
 import AboutMe from './AboutMe.js';
+import profilePic from './profilepic.jpg'
+import './Home.css';
 
-// text imports
+// Text imports
 import { introHeader, introBody } from './text.js';
 
 function Home() {

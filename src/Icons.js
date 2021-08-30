@@ -1,3 +1,4 @@
+// Font Awesome imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faKaggle } from '@fortawesome/free-brands-svg-icons';
 
@@ -8,7 +9,6 @@ export function GithubIcon(props) {
         </div>
     );
 }
-
 
 export function LinkedInIcon(props) {
     return (

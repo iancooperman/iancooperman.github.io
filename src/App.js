@@ -1,52 +1,22 @@
-import './App.css';
+// React imports
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+// Bootstrap imports
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Home from './Home'
-import ProfileButton from './ProfileButton';
-import { GithubIcon, LinkedInIcon, KaggleIcon } from './Icons';
+// CSS imports
+import './App.css';
 
-
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-
-import { projectList, ProjectIntro } from "./Projects"
+// Local imports
+import PortfolioNavbar from './PortfolioNavbar';
+import Home from './Home';
+import { projectList, ProjectIntro } from "./Projects";
+import { projectNameToURL } from './utility'
 
 function App() {
   return (
     <Router>
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">Ian Cooperman</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <NavDropdown title="Projects" id="basic-nav-dropdown">
-              {
-                projectList.map((projectInfo, index) => {
-                  return (
-                    <NavDropdown.Item href={projectNameToURL(projectInfo.name)} >{projectInfo.name}</NavDropdown.Item>
-                  )
-                })
-              }
-            </NavDropdown>
-          </Nav>
-          <ProfileButton
-            url="https://github.com/iancooperman"
-            icon={<GithubIcon />}
-          />
-          <ProfileButton
-            url="https://www.linkedin.com/in/ian-pl-cooperman/"
-            icon={<LinkedInIcon />}
-          />
-          <ProfileButton
-            url="https://www.kaggle.com/iancooperman42"
-            icon={<KaggleIcon />}
-          />
-        </Navbar.Collapse>
-      </Navbar>
+      <PortfolioNavbar />
 
       <Route path="/" exact>
         <Home />
@@ -63,16 +33,8 @@ function App() {
           )
         })
       }
-
     </Router>
   );
-}
-
-function projectNameToURL(name) {
-  let lower = name.toLowerCase();
-  let final = "/projects/" + lower.replace(/ /g, "-");
-
-  return final;
 }
 
 export default App;
