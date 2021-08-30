@@ -13,7 +13,7 @@ import { GithubIcon, LinkedInIcon, KaggleIcon } from './Icons';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
-import { projectList } from "./Projects"
+import { projectList, ProjectIntro } from "./Projects"
 
 function App() {
   return (
@@ -57,8 +57,8 @@ function App() {
         projectList.map((projectInfo, index) => {
           return (
             <Route key={index} path={projectNameToURL(projectInfo.name)}>
-              Hey
-              {projectInfo.projectPage}
+              {/* {projectInfo.projectPage} */}
+              <ProjectIntro projectInfo={projectInfo} />
             </Route>
           )
         })
