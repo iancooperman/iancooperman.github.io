@@ -27,10 +27,11 @@ function App() {
         projectList.map((projectInfo, index) => {
           return (
             <Route key={index} path={projectNameToURL(projectInfo.name)}>
-              {/* {projectInfo.projectPage} */}
+              
               <ProjectIntro projectInfo={projectInfo} />
+              {projectInfo.body}
             </Route>
-          )
+          );
         })
       }
     </Router>
