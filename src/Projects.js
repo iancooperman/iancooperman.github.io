@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 // local imports
 import JavaScriptGraphicsEngineBody from './JavaScriptGraphicsEngineBody';
+import javascriptGraphicsEngineGif from './javascript-graphics-engine.gif';
 
 // A convenient place to store info relating to different projects.
 export class ProjectInfo {
@@ -41,7 +42,7 @@ export let projectList = [
         "JavaScript Graphics Engine",
         "December 2019",
         "A simple Unity-like graphics made for the purpose of displaying simple scenes. Used to render a specific scene in the final project of my Computer Graphics class. Programmed entirely in barebones WebGL; no three.js here.",
-        null,
+        javascriptGraphicsEngineGif,
         null,
         <JavaScriptGraphicsEngineBody />
     )
