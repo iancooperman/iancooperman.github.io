@@ -1,9 +1,11 @@
 // Local imports
 import { Figure } from './utility'
+import SceneGraphDiagram from './CS-112-Final-Scene-Graph.png';
 
 // Bootstrap imports
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+
 
 
 function JavaScriptGraphicsEngineBody(props) {
@@ -21,7 +23,7 @@ function JavaScriptGraphicsEngineBody(props) {
                 the scene. Then, we render any child objects this root may happen to have, then we render the children's children and so on in a complete traversal of the tree (it's called a scene graph, but in this case, it's a tree/acyclic graph).</p>
 
 
-            <Figure caption="A diagram of the scene graph featured in the final project."></Figure>
+            <Figure src={SceneGraphDiagram} caption="A diagram of the scene graph featured in the final project."></Figure>
 
             <p>The most significant advantage of this approach is that, by parenting objects to other objects, they have the exact same relative location, rotation, and scale compared to their parents. This property came in useful when it was time to make the car move along the road and the wheels of the car spin. Instead of individually instantiating each part of the car on the same level, </p>
 
