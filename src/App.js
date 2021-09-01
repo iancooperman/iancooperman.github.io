@@ -9,6 +9,7 @@ import './App.css';
 
 // Local imports
 import PortfolioNavbar from './PortfolioNavbar';
+import BottomBar from './BottomBar';
 import Home from './Home';
 import { projectList, ProjectIntro } from "./Projects";
 import { projectNameToURL } from './utility'
@@ -33,6 +34,8 @@ function App() {
           )
         })
       }
+
+      <BottomBar />
     </Router>
   );
 }
