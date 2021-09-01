@@ -14,19 +14,48 @@ function JavaScriptGraphicsEngineBody(props) {
 
             <p>I had two weeks to complete this project: the first week was spent leanning as much about 3-D scene organization as possible, including the all-mighty <a href="https://en.wikipedia.org/wiki/Scene_graph">scene graph.</a> My previous experience with Unity allowed me to get a good understanding of it quickly. By the time the week was up, I had a more than good enough understanding to code it up myself.</p>
 
-            <p>Unfortunately, as this was completed for a school project with specific requirements, in the name of academic honesty, I cannot share the full code.However, I will eagerly provide some snippets here.</p>
+            <p>Unfortunately, as this was completed for a school project with specific requirements, in the name of academic honesty, I cannot share the full, original code. However, I will eagerly provide some snippets here.</p>
 
-            <code><pre>
+            <pre>{`
                 class GameObject: {
-                    // Array of GameObjects
-                    this._children = [];
+                    constructor() {
+                        // Array of GameObjects
+                        this._children = [];
 
-                // Array of GameComponents
-                this._components = [];
-                this._transform = new Transform();
-                this._engine = null;
+                        // Array of GameComponents
+                        this._components = [];
+                        this._transform = new Transform();
+                        this._engine = null;
+                    }
+
+                    update() {
+                        for (var i = 0; i < this._components.length; i++) {
+                            this._components[i].update();
+                        }
+                    }
+
+                    render(renderingEngine) {
+                        for (var i = 0; i < this._components.length; i++) {
+                            this._components[i].render(renderingEngine);
+                        }
+                    }
+
+                    updateAll() {
+                        this.update();
+                        for (var i = 0; i < this._children.length; i++) {
+                            this._children[i].updateAll();
+                        }
+                    }
+
+                    renderAll(renderingEngine) {
+                        this.render(renderingEngine);
+                        for (var i = 0; i < this._children.length; i++) {
+                            this._children[i].renderAll(renderingEngine);
+                        }
+                    }
                 }
-            </pre></code>
+            `}
+            </pre>
 
             <p>How a scene graph basically works is that there is a top-level, empty object that serves as a root for
                 the scene. Then, we render any child objects this root may happen to have, then we render the children's children and so on in a full traversal of the tree (it's called a scene graph, but in this case, it's a tree/acyclic graph).</p>
