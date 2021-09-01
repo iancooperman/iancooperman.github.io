@@ -4,15 +4,19 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+// local imports
+import JavaScriptGraphicsEngineBody from './JavaScriptGraphicsEngineBody';
+import javascriptGraphicsEngineGif from './javascript-graphics-engine.gif';
+
 // A convenient place to store info relating to different projects.
 export class ProjectInfo {
-    constructor(name, date, description, mainImage, link, projectPage) {
+    constructor(name, date, description, mainImage, link, body) {
         this.name = name;
         this.date = date;
         this.description = description;
         this.mainImage = mainImage;
         this.link = link;
-        this.projectPage = projectPage;
+        this.body = body;
     }
 }
 
@@ -38,9 +42,9 @@ export let projectList = [
         "JavaScript Graphics Engine",
         "December 2019",
         "A simple Unity-like graphics made for the purpose of displaying simple scenes. Used to render a specific scene in the final project of my Computer Graphics class. Programmed entirely in barebones WebGL; no three.js here.",
+        javascriptGraphicsEngineGif,
         null,
-        null,
-        null
+        <JavaScriptGraphicsEngineBody />
     )
 ];
 
