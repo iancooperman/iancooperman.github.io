@@ -1,5 +1,5 @@
 // Local imports
-import { Figure } from './utility'
+import Figure from './Figure';
 import SceneGraphDiagram from './CS-112-Final-Scene-Graph.png';
 
 // Bootstrap imports
