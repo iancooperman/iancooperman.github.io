@@ -2,3 +2,11 @@
     text-align: center;
     border-top: 1px solid grey;
 }
+
+#phone-number {
+    border-right: 1px solid grey;
+}
+
+#email-address {
+    border-left: 1px solid grey;
+}

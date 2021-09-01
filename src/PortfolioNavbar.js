@@ -5,8 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 // Local imports
-import ProfileButton from './ProfileButton';
-import { GithubIcon, LinkedInIcon, KaggleIcon } from './Icons';
+import ProfileButtons from './ProfileButton';
 import { projectList } from "./Projects";
 import { projectNameToURL } from './utility'
 
@@ -28,18 +27,7 @@ function PortfolioNavbar(props) {
                         }
                     </NavDropdown>
                 </Nav>
-                <ProfileButton
-                    url="https://github.com/iancooperman"
-                    icon={<GithubIcon />}
-                />
-                <ProfileButton
-                    url="https://www.linkedin.com/in/ian-pl-cooperman/"
-                    icon={<LinkedInIcon />}
-                />
-                <ProfileButton
-                    url="https://www.kaggle.com/iancooperman42"
-                    icon={<KaggleIcon />}
-                />
+                <ProfileButtons />
             </Navbar.Collapse>
         </Navbar>
     );
