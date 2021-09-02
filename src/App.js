@@ -8,10 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // Local imports
-import PortfolioNavbar from './PortfolioNavbar';
-import BottomBar from './BottomBar';
+import PortfolioNavbar from './pageComponents/PortfolioNavbar';
+import BottomBar from './pageComponents/BottomBar';
 import Home from './pages/Home';
-import projectPageMetaData from "./projectPageMetaData";
+import projectPageMetaData from "./pages/projectPageMetaData";
 
 function App() {
   return (

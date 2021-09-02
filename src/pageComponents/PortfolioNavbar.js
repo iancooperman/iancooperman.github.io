@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 // Local imports
 import ProfileButtons from './ProfileButton';
-import projectPageMetaData from "./projectPageMetaData";
+import projectPageMetaData from "../pages/projectPageMetaData";
 
 
 function PortfolioNavbar(props) {

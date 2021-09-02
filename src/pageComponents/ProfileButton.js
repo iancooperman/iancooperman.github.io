@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import './App.css';
+import '../App.css';
 
 import { GithubIcon, LinkedInIcon, KaggleIcon } from './Icons';
 

@@ -1,10 +1,10 @@
-import { projectNameToURL } from './utility.js';
+import { projectNameToURL } from '../utility.js';
 
 
 // import page components
-import Dyetr from './pages/Dyetr';
-import Fabflix from './pages/Fabflix';
-import JavaScriptGraphicsEngine from './pages/JavaScriptGraphicsEngine';
+import Dyetr from './Dyetr';
+import Fabflix from './Fabflix';
+import JavaScriptGraphicsEngine from './JavaScriptGraphicsEngine';
 
 // TODO: Find a more contained way to add to this list, maybe through a JSON file.
 // export let projectList = [
