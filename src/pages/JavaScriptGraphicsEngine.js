@@ -3,7 +3,7 @@ import javascriptGraphicsEngineGif from '../images/javascript-graphics-engine.gi
 import sceneGraphDiagram from '../images/CS-112-Final-Scene-Graph.png';
 
 // local js
-import ProjectIntro from '../pageComponents/ProjectIntro';
+import PageIntro from '../pageComponents/PageIntro';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
@@ -11,7 +11,7 @@ import Container from 'react-bootstrap/Container';
 function JavaScriptGraphicsEngine(props) {
     return (
         <div className="JavaScriptGraphicsEngine">
-            <ProjectIntro
+            <PageIntro
                 name="JavaScript Graphics Engine"
                 date="December 2019"
                 description="A simple Unity-like graphics engine made for the purpose of displaying simple scenes. Used to render a specific scene in the final project of my Computer Graphics class. Programmed entirely in barebones WebGL; no three.js here."

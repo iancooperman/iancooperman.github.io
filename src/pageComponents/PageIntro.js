@@ -5,6 +5,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+// CSS imports
+import './PageIntro.css';
+
 
 // This component is meant to be placed at the top of a project page component.
 // It provides a brief summary of what the project is.

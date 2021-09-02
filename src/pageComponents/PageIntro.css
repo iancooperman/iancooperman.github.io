@@ -1,0 +1,7 @@
+#preview-picture {
+    width: 300px;
+}
+
+.container img {
+    max-width: 100%;
+}

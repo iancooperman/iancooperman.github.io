@@ -10,7 +10,6 @@ import './App.css';
 // Local imports
 import PortfolioNavbar from './pageComponents/PortfolioNavbar';
 import BottomBar from './pageComponents/BottomBar';
-import Home from './pages/Home';
 import metadata from "./pages/metadata";
 
 function App() {
