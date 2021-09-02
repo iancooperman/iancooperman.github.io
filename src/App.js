@@ -11,7 +11,8 @@ import './App.css';
 import PortfolioNavbar from './PortfolioNavbar';
 import BottomBar from './BottomBar';
 import Home from './Home';
-import { projectList, ProjectIntro } from "./Projects";
+import { projectList } from "./Projects";
+import ProjectIntro from "./ProjectIntro"
 import { projectNameToURL } from './utility'
 
 function App() {

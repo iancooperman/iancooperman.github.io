@@ -48,29 +48,5 @@ export let projectList = [
     )
 ];
 
-// This component is meant to be placed at the top of a project page component.
-// It provides a brief summary of what the project is.
-export function ProjectIntro(props) {
-    let projectInfo = props.projectInfo;
 
-    return (
-        <div>
-            <Jumbotron>
-                <Container>
-                    <Row>
-                        <Col>
-                            <h1>{projectInfo.name}</h1>
-                            <h4>{projectInfo.date}</h4>
-                            <p>{projectInfo.description}</p>
-                            <a href={projectInfo.link}>{projectInfo.link}</a>
-                        </Col>
-                        <Col>
-                            <img src={projectInfo.mainImage} id="preview-picture" alt={'Screenshot of "' + projectInfo.name + '" in action.'} />
-                        </Col>
-                    </Row>
-                </Container>
-            </Jumbotron>
-        </div>
-    );
-}
 
