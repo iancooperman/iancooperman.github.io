@@ -4,20 +4,3 @@ export function projectNameToURL(name) {
 
     return final;
 }
-
-export function Figure(props) {
-    return (
-        <figure>
-            <img src={props.src} alt=""></img>
-            <figcaption>{props.caption}</figcaption>
-        </figure>
-    );
-}
-
-// export function Code(props) {
-//     return (
-//         <pre>
-//             {props.code}
-//         </pre>
-//     );
-// }

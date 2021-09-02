@@ -5,12 +5,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 // Local imports
-import AboutMe from './AboutMe.js';
-import profilePic from './profilepic.jpg'
+import AboutMe from '../AboutMe.js';
+import profilePic from '../images/profilepic.jpg'
 import './Home.css';
 
 // Text imports
-import { introHeader, introBody } from './text.js';
+import { introHeader, introBody } from '../text.js';
 
 function Home() {
     return (
