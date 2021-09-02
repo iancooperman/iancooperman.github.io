@@ -3,7 +3,7 @@ import javascriptGraphicsEngineGif from '../images/javascript-graphics-engine.gi
 import sceneGraphDiagram from '../images/CS-112-Final-Scene-Graph.png';
 
 // local js
-import ProjectIntro from '../ProjectIntro';
+import ProjectIntro from '../pageComponents/ProjectIntro';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';

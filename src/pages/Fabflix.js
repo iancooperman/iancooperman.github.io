@@ -1,5 +1,5 @@
 // local js
-import ProjectIntro from '../ProjectIntro';
+import ProjectIntro from '../pageComponents/ProjectIntro';
 
 function Fabflix(props) {
     return (
