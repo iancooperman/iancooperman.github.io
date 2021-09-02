@@ -1,10 +1,10 @@
 // local js
-import ProjectIntro from '../pageComponents/ProjectIntro';
+import PageIntro from '../pageComponents/PageIntro';
 
 function Fabflix(props) {
     return (
         <div className="Fabflix">
-            <ProjectIntro
+            <PageIntro
                 name="Fabflix"
                 date="June 2020"
                 description="A sample Netflix-like website created for a class."

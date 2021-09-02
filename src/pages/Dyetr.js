@@ -1,10 +1,10 @@
 // local js
-import ProjectIntro from '../pageComponents/ProjectIntro';
+import PageIntro from '../pageComponents/PageIntro';
 
 function Dyetr(props) {
     return (
         <div className="Dyetr">
-            <ProjectIntro 
+            <PageIntro 
                 name="Dyetr"
                 date="March 2021"
                 description="A calorie-counting app with a food recommendation system."
