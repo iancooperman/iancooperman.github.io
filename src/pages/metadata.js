@@ -2,6 +2,7 @@ import { projectNameToURL } from '../utility.js';
 
 
 // import page components
+import Home from './Home';
 import Dyetr from './Dyetr';
 import Fabflix from './Fabflix';
 import JavaScriptGraphicsEngine from './JavaScriptGraphicsEngine';
@@ -34,24 +35,33 @@ import JavaScriptGraphicsEngine from './JavaScriptGraphicsEngine';
 //     )
 // ];
 
-let projectPageMetaData = [
+let metadata = [
+    {
+        name: "Home",
+        path: "/",
+        isProject: false,
+        component: Home
+    },
     {
         name: "Dyetr",
         path: projectNameToURL("Dyetr"),
+        isProject: true,
         component: Dyetr
     },
     {
         name: "Fabflix",
         path: projectNameToURL("Fabflix"),
+        isProject: true,
         component: Fabflix
     },
     {
         name: "JavaScript Graphics Engine",
         path: projectNameToURL("JavaScript Graphics Engine"),
+        isProject: true,
         component: JavaScriptGraphicsEngine
     }
 ];
 
-export default projectPageMetaData;
+export default metadata;
 
 

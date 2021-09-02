@@ -11,22 +11,18 @@ import './App.css';
 import PortfolioNavbar from './pageComponents/PortfolioNavbar';
 import BottomBar from './pageComponents/BottomBar';
 import Home from './pages/Home';
-import projectPageMetaData from "./pages/projectPageMetaData";
+import metadata from "./pages/metadata";
 
 function App() {
   return (
     <Router>
       <PortfolioNavbar />
 
-      <Route path="/" exact>
-        <Home />
-      </Route>
-
-      {/* Give all the projects a proper route name */}
+      {/* Give all the pages a proper route name */}
       {
-        projectPageMetaData.map((data, index) => {
+        metadata.map((data, index) => {
           return (
-            <Route key={index} path={data.path} component={data.component} />
+            <Route key={index} path={data.path} exact component={data.component} />
           );
         })
       }
