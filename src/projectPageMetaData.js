@@ -2,6 +2,8 @@ import { projectNameToURL } from './utility.js';
 
 
 // import page components
+import Dyetr from './pages/Dyetr';
+import Fabflix from './pages/Fabflix';
 import JavaScriptGraphicsEngine from './pages/JavaScriptGraphicsEngine';
 
 // TODO: Find a more contained way to add to this list, maybe through a JSON file.
@@ -33,6 +35,16 @@ import JavaScriptGraphicsEngine from './pages/JavaScriptGraphicsEngine';
 // ];
 
 let projectPageMetaData = [
+    {
+        name: "Dyetr",
+        path: projectNameToURL("Dyetr"),
+        component: Dyetr
+    },
+    {
+        name: "Fabflix",
+        path: projectNameToURL("Fabflix"),
+        component: Fabflix
+    },
     {
         name: "JavaScript Graphics Engine",
         path: projectNameToURL("JavaScript Graphics Engine"),

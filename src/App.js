@@ -24,12 +24,9 @@ function App() {
 
       {/* Give all the projects a proper route name */}
       {
-        projectPageMetaData.map((projectMetaData, index) => {
+        projectPageMetaData.map((data, index) => {
           return (
-            <Route key={index} path={projectMetaData.path}>
-              
-              {projectMetaData.component}
-            </Route>
+            <Route key={index} path={data.path} component={data.component} />
           );
         })
       }
