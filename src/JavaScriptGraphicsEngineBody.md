@@ -2,7 +2,7 @@ In the Fall Quarter of 2019, I finally had the chance to take a class I had been
 
 In the 8th week of class, we were assigned our final project: to create a 3-D scene of a car driving on the road with the sun constantly rising and setting. While I could have technically hacked a previous homework assignment into something presentable (like many people ended up doing), I decided to do one better. In the name of modularity, not to mention code cleanliness, I opted to take on the complex task of building a graphics engine from scratch.
 
-I had two weeks to complete this project: the first week was spent learning as much about 3-D scene organization as possible, including the all-mighty <a [scene graph](https://en.wikipedia.org/wiki/Scene_graph).</a> My previous experience with Unity allowed me to get a good understanding of it quickly. By the time the week was up, I had more than a good mental model to code it up myself.
+I had two weeks to complete this project: the first week was spent learning as much about 3-D scene organization as possible, including the all-mighty [scene graph](https://en.wikipedia.org/wiki/Scene_graph). My previous experience with Unity allowed me to get a good understanding of it quickly. By the time the week was up, I had more than a good mental model to code it up myself.
 
 A scene graph works with a top-level, empty object that serves as a root for the scene. Then, we render any child objects this root may happen to have, then we render the children's children and so on in a complete traversal of the tree (it's called a scene graph, but in this case, it's a tree/acyclic graph).
 
@@ -54,7 +54,7 @@ class GameObject: {
 }
 ```
 
-If I were to create another engine, there are plenty of things I would do differently. For one, I would represent objects' rotation with Quaternions instead of a Vector, as Quaternion operations are more performant. However, perhaps the biggest regret I have with this implementation is the lack of proper lighting. There's a reason the scene ended up fully bright. I spent so much time putting the scene graph structure together that I didn't have enough time to write proper lighting code.
+If I were to create another engine, there are plenty of things I would do differently. For one, I would represent objects' rotation with Quaternions instead of a Vector, as Quaternion operations are more performant. However, perhaps the biggest regret I have with this implementation is the lack of proper lighting. There's a reason the scene ended up fully bright. I spent so much time putting the scene graph structure together that I didn't have enough time to write proper lighting code. Here's how rotation is currently handled in `transform.js`.
 
 ```javascript
 rotate(axis, angle) {
@@ -69,4 +69,3 @@ rotate(axis, angle) {
     }
 }
 ```
-How rotation is currently handled in `transform.js`.
