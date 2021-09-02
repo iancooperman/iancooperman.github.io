@@ -14,7 +14,7 @@ import './PageIntro.css';
 function ProjectIntro(props) {
     return (
         <div className="ProjectIntro">
-            <Jumbotron>
+            <Jumbotron fluid>
                 <Container>
                     <Row>
                         <Col>
