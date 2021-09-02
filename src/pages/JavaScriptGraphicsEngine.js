@@ -1,6 +1,12 @@
 // local pictures
-import javascriptGraphicsEngineGif from './images/javascript-graphics-engine.gif';
-import sceneGraphDiagram from '.images/CS-112-Final-Scene-Graph.png';
+import javascriptGraphicsEngineGif from '../images/javascript-graphics-engine.gif';
+import sceneGraphDiagram from '../images/CS-112-Final-Scene-Graph.png';
+
+// local js
+import ProjectIntro from '../ProjectIntro';
+
+// Bootstrap imports
+import Container from 'react-bootstrap/Container';
 
 function JavaScriptGraphicsEngine(props) {
     return (

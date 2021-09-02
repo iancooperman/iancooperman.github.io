@@ -6,8 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 // Local imports
 import ProfileButtons from './ProfileButton';
-import { projectList } from "./Projects";
-import { projectNameToURL } from './utility'
+import projectPageMetaData from "./projectPageMetaData";
 
 
 function PortfolioNavbar(props) {
@@ -19,9 +18,9 @@ function PortfolioNavbar(props) {
                 <Nav className="mr-auto">
                     <NavDropdown title="Projects" id="basic-nav-dropdown">
                         {
-                            projectList.map((projectInfo, index) => {
+                            projectPageMetaData.map((projectMetaData, index) => {
                                 return (
-                                    <NavDropdown.Item href={projectNameToURL(projectInfo.name)} >{projectInfo.name}</NavDropdown.Item>
+                                    <NavDropdown.Item href={projectMetaData.path} >{projectMetaData.name}</NavDropdown.Item>
                                 )
                             })
                         }

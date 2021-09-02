@@ -10,10 +10,8 @@ import './App.css';
 // Local imports
 import PortfolioNavbar from './PortfolioNavbar';
 import BottomBar from './BottomBar';
-import Home from './Home';
-import { projectList } from "./Projects";
-import ProjectIntro from "./ProjectIntro"
-import { projectNameToURL } from './utility'
+import Home from './pages/Home';
+import projectPageMetaData from "./projectPageMetaData";
 
 function App() {
   return (
@@ -26,12 +24,11 @@ function App() {
 
       {/* Give all the projects a proper route name */}
       {
-        projectList.map((projectInfo, index) => {
+        projectPageMetaData.map((projectMetaData, index) => {
           return (
-            <Route key={index} path={projectNameToURL(projectInfo.name)}>
+            <Route key={index} path={projectMetaData.path}>
               
-              <ProjectIntro projectInfo={projectInfo} />
-              {projectInfo.body}
+              {projectMetaData.component}
             </Route>
           );
         })
