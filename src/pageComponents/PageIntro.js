@@ -13,7 +13,7 @@ import './PageIntro.css';
 // It provides a brief summary of what the project is.
 function ProjectIntro(props) {
     return (
-        <div className="ProjectIntro">
+        <div className="PageIntro">
             <Jumbotron fluid>
                 <Container>
                     <Row>
