@@ -4,11 +4,15 @@ import sceneGraphDiagram from '../images/CS-112-Final-Scene-Graph.png';
 
 // local js
 import PageIntro from '../pageComponents/PageIntro';
+import { useTitle } from '../customHooks';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
 
+
 function JavaScriptGraphicsEngine(props) {
+    useTitle("JavaScript Graphics Engine");
+    
     return (
         <div className="JavaScriptGraphicsEngine">
             <PageIntro

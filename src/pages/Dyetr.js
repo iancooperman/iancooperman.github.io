@@ -1,7 +1,10 @@
 // local js
 import PageIntro from '../pageComponents/PageIntro';
+import { useTitle } from '../customHooks';
 
 function Dyetr(props) {
+    useTitle("Dyetr");
+    
     return (
         <div className="Dyetr">
             <PageIntro 
