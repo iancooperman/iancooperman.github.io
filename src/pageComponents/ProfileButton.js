@@ -10,7 +10,7 @@ function ProfileButton(props) {
         //         {props.icon}
         //     </Button>
         // </a>
-        <span className="ProfileButton" >
+        <span className="ProfileButton" title={props.title}>
             <Button href={props.url} variant="light">
                 {props.icon}
             </Button>
@@ -23,16 +23,19 @@ export function ProfileButtons(props) {
     return (
         <div className="ProfileButtons">
             <ProfileButton
+                title="GitHub"
                 url="https://github.com/iancooperman"
                 icon={<GithubIcon />}
                 className="mx-3"
             />
             <ProfileButton
+                title="LinkedIn"
                 url="https://www.linkedin.com/in/ian-pl-cooperman/"
                 icon={<LinkedInIcon />}
                 className="mx-3"
             />
             <ProfileButton
+                title="Kaggle"
                 url="https://www.kaggle.com/iancooperman42"
                 icon={<KaggleIcon />}
                 className="mx-3"
