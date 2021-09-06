@@ -5,10 +5,13 @@ import Container from 'react-bootstrap/Container';
 import profilePic from '../images/profilepic.jpg'
 import './Home.css';
 import PageIntro from '../pageComponents/PageIntro';
+import { useTitle } from '../customHooks';
 
 // Text imports
 
 function Home() {
+    useTitle("Home");
+
     return (
         <div className="Home">
             <PageIntro

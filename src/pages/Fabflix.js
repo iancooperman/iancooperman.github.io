@@ -1,7 +1,10 @@
 // local js
 import PageIntro from '../pageComponents/PageIntro';
+import { useTitle } from '../customHooks';
 
 function Fabflix(props) {
+    useTitle("Fabflix");
+
     return (
         <div className="Fabflix">
             <PageIntro

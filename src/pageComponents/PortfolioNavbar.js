@@ -12,7 +12,7 @@ import metadata from "../pages/metadata";
 function PortfolioNavbar(props) {
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/">Ian Cooperman</Navbar.Brand>
+            <Navbar.Brand href="/" title="Home">Ian Cooperman</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
