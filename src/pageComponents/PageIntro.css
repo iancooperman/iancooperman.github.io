@@ -1,0 +1,12 @@
+#preview-picture {
+    height: 400px;
+    margin: auto;    
+    display: block;
+}
+
+.services-section img {
+    width: 90px;
+    height: 90px;
+    
+}
+
