@@ -20,7 +20,7 @@ function PortfolioNavbar(props) {
                         {
                             metadata.map((data, index) => {
                                 return data.isProject ?
-                                    (<NavDropdown.Item href={data.path} >{data.name}</NavDropdown.Item>)
+                                    (<NavDropdown.Item href={'/#' + data.path} >{data.name}</NavDropdown.Item>)
                                     : null;
                             })
                         }
